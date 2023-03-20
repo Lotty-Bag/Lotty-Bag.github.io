@@ -45,8 +45,7 @@ Il prototype Object fornisce alcuni metodi di base. Ne vediamo alcuni:
 /* --- OBJECT GETTERS & SETTERS --- */
 
 /*
-Un Object può definire degli “speciali” metodi chiamati getters, o setters che servono a richiedere o ad impostare il valore delle
-property a cui si riferiscono.
+Un Object può definire degli “speciali” metodi chiamati getters, o setters che servono a richiedere o ad impostare il valore delle property a cui si riferiscono.
 
         var o = {
             dataProp: value,
