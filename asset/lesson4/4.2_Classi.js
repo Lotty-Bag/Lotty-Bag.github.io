@@ -9,7 +9,7 @@ Esempio di creazione di una classe:
 
 
 class Pet {
-    #privateField;      // campi privati (non visibili all'esterno)
+    #privateField;      // i campi privati (non visibili all'esterno) si segnalano col cancelletto
 
     constructor (animal, name) {       // costruttore (metodo eseguito durante la creazione dell'istanza tramite new)
         this.animal = animal;

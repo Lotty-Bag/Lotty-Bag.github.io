@@ -35,7 +35,7 @@ Può essere creato in diversi modi:
 
 // ora oltre ad aver assorbito le proprietà di animal si sono aggiunte type e corre che sono proprie solo di felino.
 
-//possiamo anche, una volta definiti dei protipi, creare un nuovo oggetto settao sui protipi già creati
+//possiamo anche, una volta definiti dei protipi, creare un nuovo oggetto settato sui protipi già creati
 
     Object.setPrototypeOf(felino, animal);
     console.log(felino)
