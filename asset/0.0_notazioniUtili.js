@@ -13,5 +13,7 @@
     `the total is ${a}`
 
 -- le barre verticali || si usano nell' if() else() per indicare o/o (o questo o quello o quell'altro) 
+
+-- Generalmente i nomi degli oggetti e delle classi usano essere con la prima lettera maiuscola ( "Student" e non "student" )
 */
 
