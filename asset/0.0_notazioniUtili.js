@@ -8,12 +8,19 @@
 -- Andare a capo per output in console: 
     "\n" (deve essere una stringa)
 
--- Per richiamare delle variabili all'interno du una stringa si usano le backtick (OPTION + \ = `):
+-- Per richiamare delle variabili all'interno di una stringa si usano le backtick (OPTION + \ = `):
     let a = 2
     `the total is ${a}`
 
--- le barre verticali || si usano nell' if() else() per indicare o/o (o questo o quello o quell'altro) 
+-- le BARRE VERTICALI || si usano nell' if() else() per indicare o/o (o questo o quello o quell'altro) 
 
--- Generalmente i nomi degli oggetti e delle classi usano essere con la prima lettera maiuscola ( "Student" e non "student" )
+-- Generalmente i NOMI DEGLI OGGETTI e delle classi usano essere con la prima lettera maiuscola ( "Student" e non "student" )
+
+-- Ricorda che le FUNZIONI posso essere scritte in 3 modi:
+        1) function DECLARED    ->   function(){...}   
+        2) function EXPRESSION  ->   var funzione = function(){...}
+        3) ARROW function       ->   var funzione = () => {...} 
+
+
 */
 

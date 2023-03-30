@@ -118,4 +118,4 @@ class yesterdayName extends Date() {
 }
 
 
-console.log(Date().todayName)
+Date().todayName

@@ -21,6 +21,7 @@ Ogni valore ha un “indice” numerico che parte da 0, dato dalla sua posizione
         - array.reverse(); -> inverte l’ordine degli elementi. (attenzione non equivale ad un sort reverse).
         
     ** Metodi di iterazione sui dati:
+        - .fill() -> permette di riempire un array vuoto con valori nulli
         - array.forEach() -> esegue un function per tutti gli elementi non ritorna niente. 
         - array.map() -> esegue una function per tutti gli elementi e ritorna come risultato un nuovo array, con gli elementi “modificati”. 
         - array.flatMap() -> esegue un array.Flat() + un array.map(). 
