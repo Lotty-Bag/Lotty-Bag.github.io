@@ -21,6 +21,7 @@
         2) function EXPRESSION  ->   var funzione = function(){...}
         3) ARROW function       ->   var funzione = () => {...} 
 
+-- NaN vuol dire NOT A NUMBER
 
 */
 

@@ -58,53 +58,57 @@ studente.sayHi()
 
 
 
-//////////////     HOISTING    //////////////
+//////////////     FUNCTION AS VALUE    //////////////
 
 
-/* .1. */
-
-displayName()
-
-function displayName() {
-    console.log("John")
+function dimmiCiao() {
+    console.log("Ciao")
 }
 
-// In questo caso abbiamo dichiarato la funzione prima ancora di scriverla. E FUNZIONA!! Questo perchè in JS vi è la possibilità di istanziare le funzioni ancora prima di dichiararle.
+console.log(dimmiCiao)
+// se alla console passiamo dimmiCiao senza le parentesi (), ci restituirà l'intera funzione
 
-// Cosa che però NON FUNZIONA con le VARIABILI e di conseguenza tanto meno con le FUNCTION EXPRESSION perchè introdotte da una variabile.
+var hello = dimmiCiao
+hello()
+// passiamo dimmiCiao a una variabile hello. quest'ultima anche se la inizializziamo come una funzione in realtà non lo è ma semplicemente passa il VALORE della funzione dimmiCiao
+
+//lo stesso proncipio lo possiamo applicare alle proprietà degli oggetti:
+
+function sum(a, b){
+    console.log(a + b)
+}
+// quindi abbiamo creato la funzione sum
+let math ={
+    add: sum,
+}
+//ora abbiamo passato il suo valore all'oggetto math (sempre senza parentesi)
+math.add(10,20)
+// e ora andiamo ad utilizzarla
 
 
 
-function convertitore(x) {
-    var y = x / 1000;
 
-    console.log(x + " grammi equivalgono a " + y + " Kg!")
-    return y
+//////////////     FUNCTION PARAMETERS    //////////////
+
+/*      (1)      */
+function add(a, b){
+    console.log(a + b)
 }
 
-convertitore(2500);
+add() //chiaramente questo ci restituirà NaN perchè non abbiamo asseggnato nessun valore
+add(10) //qui ne abbiamo assegnato uno solo e ci darà NaN cmq perchè non sa riconoscere il valore del secondo parametro
 
-
-
-function convert(tipo, quantita) {
-    // se tipo == 1 allora quantita è in grammi
-    // altrimenti quantità è in kili
-    // ritorna la conversione di conseguenza
-
-    if(tipo == 1){
-
-        var grToKg = quantita / 1000
-        console.log(quantita + " grammi equivalgono a " + grToKg + " Kg!")
-        return grToKg
-
-    } else {
-
-        var KgTogr = quantita * 1000
-        console.log(quantita + " Kg equivalgono a " + KgTogr + " gr!")
-        return KgTogr 
-    }
+/*      (2)      */
+function add1(a=0, b=0){ //in questo modo abbiamo assegnato dei valori di default ad a e b per fare in modo che richiamando add1 vuoto ci restitusca 0 invece di NaN che è un errore!
+    console.log(a + b)
 }
 
+add1()
 
+/*      (3)      */
+function add2(a=0, b=0){
+    console.log(a + b)
+}
 
-convert(2, 1250);
+add2(10)
+//definendo dei valori default e passando un solo paramentro ad add2 verrà fuori che l'altro parametro sarà 0 di default  => 10 + 0 = 10
