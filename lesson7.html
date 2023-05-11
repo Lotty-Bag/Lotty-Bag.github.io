@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEZIONE 7</title>
+</head>
+
+<body style="padding-left: 20px;padding-right: 20px;">
+    <div>
+        <h1 id="heading">Webpage</h1>
+        <h4 id="subheading">This is our tagline</h4>
+        <p class="para">This is random text on our site</p>
+        <h2>First element h2</h2>
+        <h2>Second element h2</h2>
+        <h2 class="para">Third element h2</h2>
+    </div>
+    <div>
+        <ul>
+            <li>Tea</li>
+            <li>Coffee</li>
+            <li>Juice</li>
+        </ul>
+    </div>
+</body>
+<script>
+
+    /*   ----   GET ELEMENT BY ID   ----   */
+
+    /* con document.getElementById() possiamo prendere un qualunque elemento che possiede un determinato id e 
+    cercarlo in console: */
+    
+    console.log(document.getElementById('heading'))
+    
+    /* Oppure possiamo modificarlo: */
+
+    document.getElementById('heading').innerHTML="NEW Webpage"
+
+    /* Nota che ora sia il testo sul web sia in console è "NEW Webpage" e non "Webpage" come recita l'h1 */
+
+    document.getElementById('subheading').innerHTML="This is our NEW tagline"
+
+
+
+    /*   ----   GET ELEMENT BY TAG NAME   ----   */
+
+    /* Considerando che in una pag html possono esserci più elementi con lo stesso tag, js ci permette di cercare quello che vogliamo
+    modificare attraverso il suo indice [i] */
+
+    console.log(document.getElementsByTagName('h2')) // così la console ci restituisce quanti h2 abbiamo
+
+    document.getElementsByTagName('h2')[1].innerHTML = "Second element h2 has been modified By Tag Name"
+
+
+
+    /*   ----   GET ELEMENT BY CLASS NAME  ----   */
+
+    /* Funziona analogamente a ByTagName ma con le classi. Anche qui si dovrà selezionare con [i]  */
+
+    console.log(document.getElementsByClassName('para')) // così la console ci restituisce quante class para abbiamo e su quali elementi
+
+    document.getElementsByClassName('para')[1].innerHTML = "Third element h2 has been modified By Class Name"
+
+
+
+    /*   ----   GET ELEMENT BY CLASS NAME  ----   */
+
+    /* Funziona analogamente a ByTagName ma con le classi. Anche qui si dovrà selezionare con [i]  */
+
+    console.log(document.getElementsByClassName('para')) // così la console ci restituisce quante class para abbiamo e su quali elementi
+
+    document.getElementsByClassName('para')[1].innerHTML = "Third element h2 has been modified By Class Name"
+
+</script>
+
+</html>
