@@ -73,6 +73,34 @@
 
     document.getElementsByClassName('para')[1].innerHTML = "Third element h2 has been modified By Class Name"
 
+    
+    
+    /*   ----   innerHTML | innerText | textContent  ----   */
+
+    /* Questi sono tutti metodi che ci permettono di cercare e/o modificare elementi del DOM */
+    
+    //  .innerHTML = "..."  ==> come abbiamo visto in precedenza, sostituisce in linguaggio html
+    
+            document.getElementsByTagName('li')[0].innerHTML = "<li>Tea modified with .innerHTML</li>"
+    
+    //  .innerText = "..."  ==> come abbiamo visto in precedenza, sostituisce esattamente ciò che gli scriviamo all'interno
+    
+        document.getElementsByTagName('li')[2].innerText = "<li> Coffee modified whit .innerText </li>"
+
+    //  .TextContent = "..."  ==> come abbiamo visto in precedenza, sostituisce oltre a ciò che gli scriviamo all'interno anche la formattazione (ovvero gli spazi)
+
+
+
+    /*   ----   QUERY SELECTOR  ----   */
+
+    console.log(document.querySelector("h1"))           // si può selezionare direttamente il tag
+    console.log(document.querySelector(".para"))        // oppure la classe come si richiamerebbe nel css
+    console.log(document.querySelector("#heading"))     // oppure l'id
+    console.log(document.querySelector("li"))           // quando c'è più di un elemento selezionerà solo il primo
+    console.log(document.querySelectorAll("li"))        // per selezionarli tutti usiamo ALL alla fine e ci restituisce una lista
+
+    // per selezionare un elemento tra tanti usiamo l'index come negli altri casi.
+
 </script>
 
 </html>
