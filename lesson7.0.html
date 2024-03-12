@@ -21,7 +21,11 @@
         <ul>
             <li>Tea</li>
             <li>Coffee</li>
-            <li>Juice</li>
+            <li>Juice
+
+
+            </li>
+            <li>Apple</li>
         </ul>
     </div>
 </body>
@@ -63,31 +67,24 @@
 
     document.getElementsByClassName('para')[1].innerHTML = "Third element h2 has been modified By Class Name"
 
-
-
-    /*   ----   GET ELEMENT BY CLASS NAME  ----   */
-
-    /* Funziona analogamente a ByTagName ma con le classi. Anche qui si dovrà selezionare con [i]  */
-
-    console.log(document.getElementsByClassName('para')) // così la console ci restituisce quante class para abbiamo e su quali elementi
-
-    document.getElementsByClassName('para')[1].innerHTML = "Third element h2 has been modified By Class Name"
-
     
     
     /*   ----   innerHTML | innerText | textContent  ----   */
 
     /* Questi sono tutti metodi che ci permettono di cercare e/o modificare elementi del DOM */
     
-    //  .innerHTML = "..."  ==> come abbiamo visto in precedenza, sostituisce in linguaggio html
+        //  .innerHTML = "..."  ==> come abbiamo visto in precedenza, sostituisce in linguaggio html
     
-            document.getElementsByTagName('li')[0].innerHTML = "<li>Tea modified with .innerHTML</li>"
+        document.getElementsByTagName('li')[3].innerHTML = "<li>Tea modified with .innerHTML</li>"
     
     //  .innerText = "..."  ==> come abbiamo visto in precedenza, sostituisce esattamente ciò che gli scriviamo all'interno
     
-        document.getElementsByTagName('li')[2].innerText = "<li> Coffee modified whit .innerText </li>"
+        document.getElementsByTagName('li')[1].innerText = "<li> Coffee modified with .innerText </li>"
 
-    //  .TextContent = "..."  ==> come abbiamo visto in precedenza, sostituisce oltre a ciò che gli scriviamo all'interno anche la formattazione (ovvero gli spazi)
+    //  .textContent = "..."  ==> come abbiamo visto in precedenza, sostituisce oltre a ciò che gli scriviamo all'interno anche la formattazione (ovvero gli spazi) ========> DOVREBBE far vedere gli spazi ma in realtà non lo fa.... buh!
+
+        document.getElementsByTagName('li')[2].textContent = "Juice modified      with .textContent "
+
 
 
 
