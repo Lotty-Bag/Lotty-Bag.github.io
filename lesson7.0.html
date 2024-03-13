@@ -9,27 +9,40 @@
 </head>
 
 <body style="padding-left: 20px;padding-right: 20px;">
+
+    <div class="lesson">
+        <h1>HTML DOM</h1>
+        <p>Quando la pagina web viene caricata, il browser crea un Document Object Model (DOM) della pagina => il modello HTML DOM è costruito come un albero di oggetti:</p>
+        <img src="asset/lesson7/pic_htmltree.gif" alt="">
+        <p>Nel DOM, tutti gli elementi HTML sono definiti come oggetti </p>
+        <p>Un <b>metodo</b> è un'azione che puoi eseguire (come aggiungere o eliminare un elemento HTML). Come ad esempio getElementById</p>
+        <p>Una <b>proprietà</b> è un valore che puoi ottenere o impostare (come modificare il contenuto di un elemento HTML). Come ad esempio innerHtml</p> <br><br>
+  
+    </div>
+
     <div>
-        <h1 id="heading">Webpage</h1>
+        <h2 id="heading">Webpage</h2>
         <h4 id="subheading">This is our tagline</h4>
         <p class="para">This is random text on our site</p>
-        <h2>First element h2</h2>
-        <h2>Second element h2</h2>
-        <h2 class="para">Third element h2</h2>
+        <h3>First element h3</h3>
+        <h3>Second element h3</h3>
+        <h3 class="para">Third element h3</h3>
     </div>
     <div>
         <ul>
             <li>Tea</li>
             <li>Coffee</li>
-            <li>Juice
-
-
-            </li>
+            <li>Juice</li>
             <li>Apple</li>
         </ul>
     </div>
 </body>
 <script>
+
+    /*   ----   HTML DOM   ----   */
+
+    // Quando la pagina web viene caricata, il browser crea un Document Object Model (DOM) della pagina => il modello HTML DOM è costruito come un albero di oggetti 
+
 
     /*   ----   GET ELEMENT BY ID   ----   */
 
@@ -53,9 +66,9 @@
     /* Considerando che in una pag html possono esserci più elementi con lo stesso tag, js ci permette di cercare quello che vogliamo
     modificare attraverso il suo indice [i] */
 
-    console.log(document.getElementsByTagName('h2')) // così la console ci restituisce quanti h2 abbiamo
+    console.log(document.getElementsByTagName('h3')) // così la console ci restituisce quanti h2 abbiamo
 
-    document.getElementsByTagName('h2')[1].innerHTML = "Second element h2 has been modified By Tag Name"
+    document.getElementsByTagName('h3')[1].innerHTML = "Second element h3 has been modified By Tag Name"
 
 
 
@@ -65,7 +78,7 @@
 
     console.log(document.getElementsByClassName('para')) // così la console ci restituisce quante class para abbiamo e su quali elementi
 
-    document.getElementsByClassName('para')[1].innerHTML = "Third element h2 has been modified By Class Name"
+    document.getElementsByClassName('para')[1].innerHTML = "Third element h3 has been modified By Class Name"
 
     
     
@@ -73,24 +86,25 @@
 
     /* Questi sono tutti metodi che ci permettono di cercare e/o modificare elementi del DOM */
     
-        //  .innerHTML = "..."  ==> come abbiamo visto in precedenza, sostituisce in linguaggio html
-    
-        document.getElementsByTagName('li')[3].innerHTML = "<li>Tea modified with .innerHTML</li>"
     
     //  .innerText = "..."  ==> come abbiamo visto in precedenza, sostituisce esattamente ciò che gli scriviamo all'interno
     
-        document.getElementsByTagName('li')[1].innerText = "<li> Coffee modified with .innerText </li>"
+        document.getElementsByTagName('li')[0].innerText = "<li> Coffee modified with .innerText </li>"
 
     //  .textContent = "..."  ==> come abbiamo visto in precedenza, sostituisce oltre a ciò che gli scriviamo all'interno anche la formattazione (ovvero gli spazi) ========> DOVREBBE far vedere gli spazi ma in realtà non lo fa.... buh!
 
-        document.getElementsByTagName('li')[2].textContent = "Juice modified      with .textContent "
+        document.getElementsByTagName('li')[1].textContent = "Juice modified      with .textContent "
+
+    //  .innerHTML = "..."  ==> come abbiamo visto in precedenza, sostituisce in linguaggio html
+
+        document.getElementsByTagName('li')[2].innerHTML = "<li>Tea modified with .innerHTML</li>"
 
 
 
 
     /*   ----   QUERY SELECTOR  ----   */
 
-    console.log(document.querySelector("h1"))           // si può selezionare direttamente il tag
+    console.log(document.querySelector("h2"))           // si può selezionare direttamente il tag
     console.log(document.querySelector(".para"))        // oppure la classe come si richiamerebbe nel css
     console.log(document.querySelector("#heading"))     // oppure l'id
     console.log(document.querySelector("li"))           // quando c'è più di un elemento selezionerà solo il primo

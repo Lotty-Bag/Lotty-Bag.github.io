@@ -23,5 +23,7 @@
 
 -- NaN vuol dire NOT A NUMBER
 
+-- Differenza principale tra HTML e XML = l'html ha tag predefiniti mentre l'xml utilizza tag personalizzato che possono essere definiti dall'utente.
+
 */
 

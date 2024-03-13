@@ -21,13 +21,13 @@
         </ul>
     </div>
 
-    <div>
-        <h1>Lesson 2 : Siblings</h1>
+    <div class="banner2">
+        <h2>Lesson 2 : Siblings</h2>
     </div>
 
     <div>
         <ul class="item-list2">
-            <li>item 1</li>
+            <li id="firstLi">item 1</li>
             <li>item 2</li>
             <li>item 3</li>
             <li>item 4</li>
@@ -48,6 +48,7 @@
 
     console.log(child.parentElement)                        // così richiamiamo nuovamente il banner che è genitore di h1
 
+    
 
     /* altro esempio  */
 
@@ -63,12 +64,45 @@
     // restituisce una strana lista dove inserisce tra i 'li' dei 'text' => questi text in realtà sono gli spazi tra un li e l'altro
 
     console.log(list.children)                              // così ci ritroviamo tutti gli elementi correttamente
-    console.log(list.children[3])                           // e sempre attraverso l'indice andiamo a selezioinare quello che ci interessa
+    console.log(list.children[3])                           // e sempre attraverso l'indice andiamo a selezionare quello che ci interessa
+
+    // In quest'ultimo esempio vediamo come parentNode e parentElement coincidono se effettuiamo una ricerca mirata. quindi per cercare il genitore di h1 possiamo usare entrambi i metodi. 
+    console.log(document.querySelector("h1").parentNode)
+    console.log(document.querySelector("h1").parentElement)
+
+    //se invece estendiamo la ricerca a tutto il documento attraverso .documentElement otterremo:
+
+    console.log(document.documentElement)                       // è il nostro documento che inizia con <html>
+
+    console.log(document.documentElement.parentNode)             // il 'genitore nodo' del nostro documento è il documento stesso
+    console.log(document.documentElement.parentElement)          // mentre se ricerchiamo il 'parente' del documento il risultato sarà null in quanto non ne abbiamo ancora istanziato uno
+
+    // per comprendere meglio le relazioni parentali, guarda l'immagine presente in cartella lesson7 chiamata parentele.
 
 
-    /*   ----   SIBLINGS ----   */
 
 
+    /*   ----   SIBLINGS = Fratelli/Sorelle ----   */
+
+    // Osservando la lista della lezione 2 troviamo che <ul> è genitore mentre i <li> sono i figli, ma i <li> tra di loro sono fratelli (= siblings)
+    // Per selezionare il primo elemento sibling creiamo una variabile
+
+    let firstSib = document.getElementById('firstLi')
+    console.log(firstSib)
+
+    // con .nextElementSibling possiamo trovare il fratello successivo
+    console.log(firstSib.nextElementSibling)
+    
+    // a questo punto bisognerebbe un altra variabile con cui salvare item 2 per poi trovare l'item 3 con nextElementSibling. chiaramente non è efficace se i fratelli sono tanti, quindi ha senso creare un ciclo while partendo solo dall'individuazione del primo elemento sibling:
+
+    let nextSib = firstSib.nextElementSibling
+
+    while (nextSib){
+        console.log(nextSib)
+        nextSib = nextSib.nextElementSibling
+    }
+
+       
 </script>
 
 </html>
