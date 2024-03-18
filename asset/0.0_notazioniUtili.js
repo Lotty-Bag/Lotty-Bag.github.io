@@ -25,5 +25,7 @@
 
 -- Differenza principale tra HTML e XML = l'html ha tag predefiniti mentre l'xml utilizza tag personalizzato che possono essere definiti dall'utente.
 
+-- += può essere usato sia come addizione tra numeri che come concatenazione tra stringhe
+
 */
 
